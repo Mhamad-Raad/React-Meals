@@ -4,7 +4,7 @@ import { BsCart4 } from "react-icons/bs";
  
 const HeaderCartButton = (props) => { 
   return (
-    <button className={CSSClasses.button}>
+    <button className={CSSClasses.button} onClick={props.onClickHandler}>
       <span className={CSSClasses.icon}>
         <BsCart4 />
       </span>
