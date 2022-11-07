@@ -3,7 +3,7 @@ import React from 'react';
 import CartButton from './HeaderCartButton';
 
 import CSSClasses from './Header.module.css';
-import HeaderIMG from '../../Assets/meals.jpg';
+import HeaderIMG from '../../Assets/a.jpg';
 
 const Header = (props) => {
   return (
@@ -13,7 +13,7 @@ const Header = (props) => {
         <CartButton onClickHandler={ props.onClickHandler} />
       </header>
 
-      <div className={ CSSClasses['main-image']}>
+      <div className={ CSSClasses.main_image}>
         <img src={HeaderIMG} alt="nice foods on the table!!" />
       </div>
     </>

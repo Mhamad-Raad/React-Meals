@@ -54,6 +54,10 @@ const Checkout = (props) => {
 
     props.onConfirm(userInfo);
 
+    nameInputRef.current.value = '';
+    streetInputRef.current.value = '';
+    postalInputRef.current.value = '';
+    cityInputRef.current.value = '';
   };
 
   return (

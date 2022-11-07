@@ -44,7 +44,7 @@ const Cart = (props) => {
     cartCtx.clearCart();
   };
 
-  const cartItems = <ul className={CSSClasses['cart-items']}>
+  const cartItems = <ul className={CSSClasses.cart_items}>
     {cartCtx.items.map((item) => (
       <CartItem
         key={item.id}
@@ -58,7 +58,7 @@ const Cart = (props) => {
   
   const modalActions =
     <div className={CSSClasses.actions}>
-      <button className={CSSClasses['button--alt']} onClick={props.onClose}>Close</button>
+      <button className={CSSClasses.button__alt} onClick={props.onClose}>Close</button>
       {hasItems && <button className={CSSClasses.button} onClick={onOrderHandler}>Order</button>}
     </div>;
   
