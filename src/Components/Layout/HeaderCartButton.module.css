@@ -62,3 +62,25 @@
     transform: scale(1);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 45%;
+    font-size: 8px;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+  }
+
+  .badge {
+    padding: 0.3rem .6rem;
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+  
+  .btnText {
+    font-size: 8px;
+  }
+
+}

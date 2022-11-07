@@ -19,7 +19,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
-  max-height: 600px;
+  max-height: 500px;
   overflow: auto;
   overflow-y: scroll;
 }

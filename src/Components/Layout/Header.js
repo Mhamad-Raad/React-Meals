@@ -12,7 +12,6 @@ const Header = (props) => {
         <h1>React Meals</h1>
         <CartButton onClickHandler={ props.onClickHandler} />
       </header>
-
       <div className={ CSSClasses.main_image}>
         <img src={HeaderIMG} alt="nice foods on the table!!" />
       </div>
