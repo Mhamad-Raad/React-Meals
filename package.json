@@ -2,7 +2,7 @@
   "name": "react-meals",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mhamad-raad.github.io/",
+  "homepage": "https://mhamad-raad.github.io/React-Meals/", 
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
