@@ -12,7 +12,7 @@ const Cart = (props) => {
 
   const cartCtx = useContext(CartContext);
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
-  const hasItems = cartCtx.items.length > 0;
+  const hasItems = cartCtx.items?.length > 0;
   const [isCheckout, setisCheckout] = useState(false);
   const [isSubmitting, setisSubmitting] = useState(false);
   const [didSubmit, setdidSubmit] = useState(false);
@@ -22,7 +22,6 @@ const Cart = (props) => {
   };
 
   const addItem = (item) => {
-    console.log(item);
     cartCtx.addItem({ ...item, amount: 1 });
   };
 
@@ -45,7 +44,7 @@ const Cart = (props) => {
   };
 
   const cartItems = <ul className={CSSClasses.cart_items}>
-    {cartCtx.items.map((item) => (
+    {cartCtx.items?.map((item) => (
       <CartItem
         key={item.id}
         name={item.name}

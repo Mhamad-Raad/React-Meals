@@ -28,8 +28,7 @@ const HeaderCartButton = (props) => {
     }, [items]
   );
 
-
-  const buttonClasses = `${CSSClasses.button} ${btnHighlighted===true? CSSClasses.bump: ''}`;
+  const buttonClasses = [CSSClasses.button, btnHighlighted===true?CSSClasses.bump: ''].join(' ');
 
   return (
     <button className={buttonClasses} onClick={props.onClickHandler}>

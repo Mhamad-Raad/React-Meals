@@ -1,27 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route, Routes,
+} from 'react-router-dom';
 
-import Meals from './Components/Meals/Meals';
-import Header from './Components/Layout/Header';
-import Cart from './Components/Carts/Cart';
-import CartProvider from './Context/CartProvider';
+import Home from './Home';
+
+
 
 function App() {
-  const [isShown, setIsShown] = useState(false);
 
-  const showCartHandler = () => {
-    setIsShown(true);
-  };
-
-  const hideCartHandler = () => {
-    setIsShown(false);
-  };
   
   return (
-    <CartProvider>
-      {isShown && <Cart onClose={hideCartHandler} />}
-      <Header onClickHandler={ showCartHandler } />
-      <Meals />
-    </CartProvider>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
