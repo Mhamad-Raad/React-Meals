@@ -1,10 +1,22 @@
-import React, { Fragment } from 'react';
-import Header from './Components/Layout/Header'
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route, Routes,
+} from 'react-router-dom';
+
+import Home from './Home';
+
+
+
 function App() {
+
+  
   return (
-    <Fragment>
-      <Header/>
-    </Fragment>
+    <Router>
+      <Routes>
+        <Route exact path="React-Meals/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
