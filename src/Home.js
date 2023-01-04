@@ -24,7 +24,7 @@ const Home = () => {
             {isShown && <Cart onClose={ hideCartHandler } />}
             <Header onClickHandler={ showCartHandler } />
             <Meals />
-         </CartProvider>      
+        </CartProvider>
       </React.Fragment>
   );
 }

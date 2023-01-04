@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Card from '../UI/Card';
-import MealItem from './MealItem/MealItem';
+import Card from "../UI/Card";
+import MealItem from "./MealItem/MealItem";
 
-import CSSClasses from './AvailableMeals.module.css';
+import CSSClasses from "./AvailableMeals.module.css";
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
   const [isLoading, setisLoading] = useState(true);
   const [httpError, setHttpError] = useState();
 
-  useEffect(async () => {
+  useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch('https://react-meals-37692-default-rtdb.firebaseio.com/meals.json');
+      const response = await fetch(
+        "https://react-meals-37692-default-rtdb.firebaseio.com/meals.json"
+      );
 
       if (!response.ok) {
-        throw new Error('Something went wrong!');
+        throw new Error("Something went wrong!");
       }
 
       const responseData = await response.json();
 
-    
       const loadedMeals = [];
 
       for (const key in responseData) {
@@ -33,13 +34,12 @@ const AvailableMeals = () => {
       }
       setMeals(loadedMeals);
       setisLoading(false);
-    }
+    };
 
-    fetchMeals().catch(error => {
+    fetchMeals().catch((error) => {
       setisLoading(false);
       setHttpError(error.message);
     });
-   
   }, []);
 
   if (isLoading) {
@@ -58,14 +58,15 @@ const AvailableMeals = () => {
     );
   }
 
-  const mealsList = meals.map((meal) =>
+  const mealsList = meals.map((meal) => (
     <MealItem
-      key={ meal.id }
-      price={ meal.price }
-      description={ meal.description }
-      name={ meal.name }
-      id={ meal.id }  
-    />);
+      key={meal.id}
+      price={meal.price}
+      description={meal.description}
+      name={meal.name}
+      id={meal.id}
+    />
+  ));
 
   return (
     <section className={CSSClasses.meals}>
@@ -74,6 +75,6 @@ const AvailableMeals = () => {
       </Card>
     </section>
   );
-}
+};
 
 export default AvailableMeals;
